@@ -4,7 +4,6 @@ import "./index.css";
 import { City } from "../components/City";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { cities } from "../cz-cities";
-import { ImgModal } from "../components/ImgModal";
 
 document.querySelector("#root").innerHTML = render(
   <div className="table-container">
@@ -31,6 +30,5 @@ document.querySelector("#root").innerHTML = render(
         ))}
       </tbody>
     </table>
-    <ImgModal />
   </div>
 );

@@ -1,27 +1,15 @@
 export const City = ({ name, population, area, district, img }) => {
-  const handleImageClick = () => {
-    const modalImage = document.getElementById("modalImage");
-    modalImage.src = img;
-    const photoModal = new bootstrap.Modal(
-      document.getElementById("photoModal")
-    );
-    photoModal.show();
-  };
+  const formattedPopulation = population.toLocaleString("cs-CZ");
+  const formattedArea = Math.round(area);
 
   return (
     <tr>
-      <td>{name}</td>
+      <td className="h6">{name}</td>
       <td>{district}</td>
-      <td>{population} obyvatel</td>
-      <td>{area} km²</td>
+      <td>{formattedPopulation} obyvatel</td>
+      <td>{formattedArea} km²</td>
       <td>
-        <img
-          src={img}
-          alt={name}
-          className="img-thumbnail"
-          style={{ cursor: "pointer" }}
-          onClick={handleImageClick}
-        />
+        <img src={img} alt={name} />
       </td>
     </tr>
   );
