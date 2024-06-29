@@ -1,4 +1,4 @@
-export const City = ({ name, population, area, district, img }) => {
+export const CityRow = ({ name, population, area, district, img }) => {
   const formattedPopulation = population.toLocaleString("cs-CZ");
   const formattedArea = Math.round(area);
 
